@@ -152,5 +152,12 @@ int elementosArvore(NO* no)
 
 void exibirElementosArvore(NO* no)
 {
+	if (no == NULL) {
+		std::cout << "Arvore vazia" << endl;
+		return;
+	}
+
+	std::cout << 1 + elementosArvore(no->esq) + elementosArvore(no->dir) << " Elementos" << endl;
+	return;
 	
 }
